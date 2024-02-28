@@ -1,0 +1,84 @@
+{
+	"info": {
+		"_postman_id": "66427060-3207-442b-8fb5-c060bc69e085",
+		"name": "INVOX",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23558721"
+	},
+	"item": [
+		{
+			"name": "https://localhost:5001/VoiceFiles/Upstream",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Disposition",
+						"value": "test1.mp3",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "files",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "userName",
+							"value": "testUser",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://localhost:5001/VoiceFiles/Upstream",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"VoiceFiles",
+						"Upstream"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:5002/transcriptor/transcript",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5002/transcriptor/transcript",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5002",
+					"path": [
+						"transcriptor",
+						"transcript"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
